@@ -1,0 +1,11 @@
+workflows:
+  ios-workflow:
+    name: Codemagic iOS Workflow
+    max_build_duration: 120
+    instance_type: mac_mini_m2
+    scripts:
+      - name: Build iOS App
+        script: |
+          ./build-ipa.sh
+    artifacts:
+      - build/AirCard-iOS.ipa
